@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f4f6f9;
+  color: #111;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #04162d, #063a6b);
+  padding: 14px 28px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav a.active,
+nav a:hover {
+  color: #2dd4bf;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* MAIN */
+main {
+  flex: 1;
+  padding: 45px 30px;
+}
+
+section {
+  max-width: 900px;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+h2 {
+  margin: 18px 0 8px;
+}
+
+p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background: #22c55e;
+  color: #fff;
+}
+
+.btn-outline {
+  border: 2px solid #111;
+  color: #111;
+}
+
+/* FORM */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(90deg, #04162d, #063a6b);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* FLOATING BUTTON BASE */
+.float-btn {
+  position: fixed;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+.float-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* WHATSAPP */
+.float-btn.whatsapp {
+  bottom: 20px;
+  background: #25D366;
+}
+
+/* INSTAGRAM */
+.float-btn.instagram {
+  bottom: 90px;
+  background: #E1306C;
+}
+
+/* LINKEDIN */
+.float-btn.linkedin {
+  bottom: 160px;
+  background: #0A66C2;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #04162d;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  /* LINKEDIN BUTTON */
+.btn-linkedin {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.btn-linkedin:hover {
+  background: #004182;
+}
+
+.linkedin {
+  bottom: 150px; /* above Instagram */
+  background: #0a66c2;
+}
+
+}
